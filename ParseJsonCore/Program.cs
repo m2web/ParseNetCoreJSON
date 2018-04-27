@@ -34,6 +34,9 @@ namespace ParseJsonCore
             return rootObj.passages;
         }
     }
+    
+//1. To check if the Json structure is OKAY: http://jsonlint.com/
+//2. To genarate my Object class from my Json structure: http://json2csharp.com/
 
     public class PassageMeta
     {
