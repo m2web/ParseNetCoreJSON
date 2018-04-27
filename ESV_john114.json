@@ -1,0 +1,13 @@
+{
+	"query":"john 1:14",
+	"canonical":"John 1:14",
+	"parsed":[[43001014,43001014]],
+	"passage_meta":[{"canonical":"John 1:14",
+		"chapter_start":[43001001,43001051],
+		"chapter_end":[43001001,43001051],
+		"prev_verse":43001013,"next_verse":43001015,
+		"prev_chapter":[42024001,42024053],
+		"next_chapter":[43002001,43002025]}],
+		"passages":["<h2 class=\"extra_text\">John 1:14 <small class=\"audio extra_text\">(<a class=\"mp3link\" href=\"https://audio.esv.org/hw/43001014-43001014.mp3\" title=\"John 1:14\" type=\"audio/mpeg\">Listen</a>)</small></h2>\n<p id=\"p43001014_01-1\"><b class=\"verse-num\" id=\"v43001014-1\">14&nbsp;</b>And the Word became flesh and dwelt among us, and we have seen his glory, glory as of the only Son<sup class=\"footnote\"><a class=\"fn\" href=\"#f1-1\" id=\"fb1-1\" title=\"&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;only One&lt;/i&gt;, or &lt;i&gt;unique One&lt;/i&gt;&lt;/note&gt;\">1</a></sup> from the Father, full of grace and truth.</p>\n<div class=\"footnotes extra_text\">\n<h3>Footnotes</h3>\n<p><span class=\"footnote\"><a href=\"#fb1-1\" id=\"f1-1\">[1]</a></span> <span class=\"footnote-ref\">1:14</span> <note class=\"alternative\">Or <i>only One</i>, or <i>unique One</i></note>\n</p>\n</div>\n<p>(<a href=\"http://www.esv.org\" class=\"copyright\">ESV</a>)</p>"
+	]
+}
