@@ -10,18 +10,25 @@ namespace ParseJsonCore
         static void Main(string[] args)
         {
             var json = "";
-            var jsonFile = @"C:\Users\m2web\code\ParseJsonCore\ESV_john114.json";
+            var jsonFile = @"C:\Users\m2web\code\ParseJsonCore\ESV_john1_1.json";
 
-            using (var r = new StreamReader(jsonFile))
+            if (File.Exists(jsonFile))
             {
-                json = r.ReadToEnd();
+                using (var r = new StreamReader(jsonFile))
+                {
+                    json = r.ReadToEnd();
+                }
+
+                var verses = JsonToObject(json);
+
+                foreach (var verse in verses)
+                {
+                    Console.WriteLine(verse);
+                }
             }
-
-            var verses = JsonToObject(json);
-
-            foreach (var verse in verses)
+            else
             {
-                Console.WriteLine(verse);
+                Console.WriteLine("No file to load.");
             }
 
             Console.WriteLine("Press any key to continue.");
