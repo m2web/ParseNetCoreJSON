@@ -12,33 +12,33 @@ namespace ParseJsonCore
     {
         #region Using JSON File
 
-        static void Main(string[] args)
-        {
-            var json = "";
-            var jsonFile = @"C:\Users\m2web\code\ParseJsonCore\ESV_john1_1.json";
+        //static void Main(string[] args)
+        //{
+        //    var json = "";
+        //    var jsonFile = @"C:\Users\m2web\code\ParseJsonCore\ESV_john1_1.json";
 
-            if (File.Exists(jsonFile))
-            {
-                using (var r = new StreamReader(jsonFile))
-                {
-                    json = r.ReadToEnd();
-                }
+        //    if (File.Exists(jsonFile))
+        //    {
+        //        using (var r = new StreamReader(jsonFile))
+        //        {
+        //            json = r.ReadToEnd();
+        //        }
 
-                var verses = JsonToObject(json);
+        //        var verses = JsonToObject(json);
 
-                foreach (var verse in verses)
-                {
-                    Console.WriteLine(verse);
-                }
-            }
-            else
-            {
-                Console.WriteLine("No file to load.");
-            }
+        //        foreach (var verse in verses)
+        //        {
+        //            Console.WriteLine(verse);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("No file to load.");
+        //    }
 
-            Console.WriteLine("Press any key to continue.");
-            Console.ReadKey();
-        }
+        //    Console.WriteLine("Press any key to continue.");
+        //    Console.ReadKey();
+        //}
 
         public static List<string> JsonToObject(string json)
         {
@@ -50,21 +50,20 @@ namespace ParseJsonCore
 
         #region Using HttpClient
         static HttpClient client = new HttpClient();
-        //static void Main(string[] args)
-        //{
-        //    var verses = RunAsync().GetAwaiter().GetResult();
-        //    foreach (var verse in verses)
-        //    {
-        //        Console.WriteLine(verse);
-        //    }
-        //    Console.WriteLine("Press any key to continue.");
-        //    Console.ReadKey();
-        //}
+        static void Main(string[] args)
+        {
+            var verses = RunAsync().GetAwaiter().GetResult();
+            foreach (var verse in verses)
+            {
+                Console.WriteLine(verse);
+            }
+            Console.WriteLine("Press any key to continue.");
+            Console.ReadKey();
+        }
 
         static async Task<List<string>> RunAsync()
         {
-            // Update port # in the following line.
-            client.BaseAddress = new Uri("https://api.esv.org/");
+            client.BaseAddress = new Uri("https://api.esv.org");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
